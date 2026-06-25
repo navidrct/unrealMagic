@@ -242,7 +242,7 @@ footer{
                         <span class="new-price">$9.99</span>
                     </div>
 
-                    <a href="https://www.udemy.com/course/unreal-engine-5-7-course-in-1-ultimate-mega-course-ue5/?couponCode=A0353C8173376B9835A9&utm_campaign=email&utm_medium=email&utm_source=sendgrid.com" class="buy-btn">
+                    <a href="#" class="buy-btn" data-course="7In1">
                         Get Discount
                     </a>
 
@@ -288,7 +288,7 @@ footer{
                         <span class="new-price">$9.99</span>
                     </div>
 
-                    <a href="https://www.udemy.com/course/unreal-engine-5-advance-locomotion-system-als-intermediate/?couponCode=F907CD092FCC50A64726&utm_campaign=email&utm_medium=email&utm_source=sendgrid.com" class="buy-btn">
+                    <a href="#" class="buy-btn" data-course="7In1">
                         Get Discount
                     </a>
 
@@ -334,7 +334,7 @@ footer{
                         <span class="new-price">$9.99</span>
                     </div>
 
-                    <a href="https://www.udemy.com/course/unreal-engine-5-ui-design-advance-inventory-system-with-ue5/?couponCode=A98330B58DAB604AD1E3&utm_campaign=email&utm_medium=email&utm_source=sendgrid.com" class="buy-btn">
+                    <a href="#" class="buy-btn" data-course="7In1">
                         Get Discount
                     </a>
 
@@ -380,7 +380,7 @@ footer{
                         <span class="new-price">$10.99</span>
                     </div>
 
-                    <a href="https://www.udemy.com/course/unreal-engine-5-create-video-game-in-ue5-with-blueprint/?couponCode=KEEPLEARNING" class="buy-btn">
+                    <a href="#" class="buy-btn" data-course="7In1">
                         Get Discount
                     </a>
 
@@ -426,7 +426,7 @@ footer{
                         <span class="new-price">$9.99</span>
                     </div>
 
-                    <a href="https://www.udemy.com/course/unreal-engine-5-create-game-in-c-and-blueprint-beginner/?couponCode=KEEPLEARNING" class="buy-btn">
+                    <a href="#" class="buy-btn" data-course="7In1">
                         Get Discount
                     </a>
 
@@ -472,7 +472,7 @@ footer{
                         <span class="new-price">$9.99</span>
                     </div>
 
-                    <a href="https://www.udemy.com/course/unreal-engine-5-control-rig-procedural-mesh-level-sequence-ladder/?couponCode=KEEPLEARNING" class="buy-btn">
+                    <a href="#" class="buy-btn" data-course="7In1">
                         Get Discount
                     </a>
 
@@ -490,6 +490,32 @@ footer{
 <footer>
 © 2026 Unreal Magic Academy
 </footer>
+
+<script>
+async function loadCourseLinks() {
+    try {
+        const response = await fetch("courses.json");
+        const data = await response.json();
+
+        const buttons = document.querySelectorAll(".buy-btn");
+
+        buttons.forEach(btn => {
+            const id = btn.getAttribute("data-course");
+
+            const course = data.find(c => c.id === id);
+
+            if (course) {
+                btn.href = course.url;
+            }
+        });
+
+    } catch (err) {
+        console.log("Error loading JSON:", err);
+    }
+}
+
+loadCourseLinks();
+</script>
 
 </body>
 </html>
