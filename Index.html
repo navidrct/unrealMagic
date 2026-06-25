@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Unreal Magic Academy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0b1020;
+    color:white;
+}
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+}
+
+.hero{
+    text-align:center;
+    padding:100px 20px;
+    background:
+    radial-gradient(circle at top left,#6c3cff 0%,transparent 40%),
+    radial-gradient(circle at bottom right,#00c2ff 0%,transparent 40%);
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    opacity:.8;
+    font-size:1.1rem;
+}
+
+.section-title{
+    text-align:center;
+    margin:80px 0 40px;
+    font-size:2.5rem;
+}
+
+.courses{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(370px,1fr));
+    gap:30px;
+    margin-bottom:80px;
+}
+
+.course-card{
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.course-card:hover{
+    transform:translateY(-8px);
+}
+
+.course-image{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.course-content{
+    padding:25px;
+}
+
+.discount{
+    display:inline-block;
+    background:#ff4d4d;
+    color:white;
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:.8rem;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.course-title{
+    font-size:1.4rem;
+    margin-bottom:10px;
+}
+
+.meta{
+    color:#ffc107;
+    margin-bottom:15px;
+}
+
+.description{
+    color:#c7c7c7;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+.features{
+    list-style:none;
+    margin-bottom:25px;
+}
+
+.features li{
+    margin-bottom:8px;
+    color:#d7d7d7;
+}
+
+.bottom-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+}
+
+.prices{
+    display:flex;
+    flex-direction:column;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:#777;
+    font-size:.9rem;
+}
+
+.new-price{
+    font-size:1.8rem;
+    font-weight:700;
+    color:#00ff88;
+}
+
+.buy-btn{
+    background:linear-gradient(135deg,#6c3cff,#8b5cf6);
+    color:white;
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.buy-btn:hover{
+    transform:scale(1.05);
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    opacity:.5;
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .bottom-row{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .buy-btn{
+        width:100%;
+        text-align:center;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+    <h1>Unreal Magic Academy</h1>
+
+    <p>
+        Learn Unreal Engine, PaperZD, Python and Game Development
+        through practical project-based courses used by thousands of students.
+    </p>
+
+</section>
+
+<div class="container">
+
+    <h2 class="section-title">
+        Featured Courses
+    </h2>
+
+    <div class="courses">
+
+        <div class="course-card">
+
+            <img src="course1.jpg"
+            class="course-image">
+
+            <div class="course-content">
+
+                <span class="discount">
+                    🔥 85% OFF
+                </span>
+
+                <h3 class="course-title">
+                    Top Down Shooter in Unreal Engine 5
+                </h3>
+
+                <div class="meta">
+                    ★★★★★ 4.8 • 2,400 Students
+                </div>
+
+                <p class="description">
+                    Build a complete top-down shooter game from scratch using
+                    Blueprint. Learn combat systems, enemy AI, UI,
+                    weapons, animations and professional workflows.
+                </p>
+
+                <ul class="features">
+                    <li>✓ Beginner Friendly</li>
+                    <li>✓ Full Game Project</li>
+                    <li>✓ Blueprint Only</li>
+                    <li>✓ Source Files Included</li>
+                </ul>
+
+                <div class="bottom-row">
+
+                    <div class="prices">
+                        <span class="old-price">$89.99</span>
+                        <span class="new-price">$12.99</span>
+                    </div>
+
+                    <a href="#" class="buy-btn">
+                        Get Discount
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="course-card">
+
+            <img src="course1.jpg"
+            class="course-image">
+
+            <div class="course-content">
+
+                <span class="discount">
+                    🔥 85% OFF
+                </span>
+
+                <h3 class="course-title">
+                    Top Down Shooter in Unreal Engine 5
+                </h3>
+
+                <div class="meta">
+                    ★★★★★ 4.8 • 2,400 Students
+                </div>
+
+                <p class="description">
+                    Build a complete top-down shooter game from scratch using
+                    Blueprint. Learn combat systems, enemy AI, UI,
+                    weapons, animations and professional workflows.
+                </p>
+
+                <ul class="features">
+                    <li>✓ Beginner Friendly</li>
+                    <li>✓ Full Game Project</li>
+                    <li>✓ Blueprint Only</li>
+                    <li>✓ Source Files Included</li>
+                </ul>
+
+                <div class="bottom-row">
+
+                    <div class="prices">
+                        <span class="old-price">$89.99</span>
+                        <span class="new-price">$12.99</span>
+                    </div>
+
+                    <a href="#" class="buy-btn">
+                        Get Discount
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="course-card">
+
+            <img src="course1.jpg"
+            class="course-image">
+
+            <div class="course-content">
+
+                <span class="discount">
+                    🔥 85% OFF
+                </span>
+
+                <h3 class="course-title">
+                    Top Down Shooter in Unreal Engine 5
+                </h3>
+
+                <div class="meta">
+                    ★★★★★ 4.8 • 2,400 Students
+                </div>
+
+                <p class="description">
+                    Build a complete top-down shooter game from scratch using
+                    Blueprint. Learn combat systems, enemy AI, UI,
+                    weapons, animations and professional workflows.
+                </p>
+
+                <ul class="features">
+                    <li>✓ Beginner Friendly</li>
+                    <li>✓ Full Game Project</li>
+                    <li>✓ Blueprint Only</li>
+                    <li>✓ Source Files Included</li>
+                </ul>
+
+                <div class="bottom-row">
+
+                    <div class="prices">
+                        <span class="old-price">$89.99</span>
+                        <span class="new-price">$12.99</span>
+                    </div>
+
+                    <a href="#" class="buy-btn">
+                        Get Discount
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="course-card">
+
+            <img src="course1.jpg"
+            class="course-image">
+
+            <div class="course-content">
+
+                <span class="discount">
+                    🔥 85% OFF
+                </span>
+
+                <h3 class="course-title">
+                    Top Down Shooter in Unreal Engine 5
+                </h3>
+
+                <div class="meta">
+                    ★★★★★ 4.8 • 2,400 Students
+                </div>
+
+                <p class="description">
+                    Build a complete top-down shooter game from scratch using
+                    Blueprint. Learn combat systems, enemy AI, UI,
+                    weapons, animations and professional workflows.
+                </p>
+
+                <ul class="features">
+                    <li>✓ Beginner Friendly</li>
+                    <li>✓ Full Game Project</li>
+                    <li>✓ Blueprint Only</li>
+                    <li>✓ Source Files Included</li>
+                </ul>
+
+                <div class="bottom-row">
+
+                    <div class="prices">
+                        <span class="old-price">$89.99</span>
+                        <span class="new-price">$12.99</span>
+                    </div>
+
+                    <a href="#" class="buy-btn">
+                        Get Discount
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="course-card">
+
+            <img src="course1.jpg"
+            class="course-image">
+
+            <div class="course-content">
+
+                <span class="discount">
+                    🔥 85% OFF
+                </span>
+
+                <h3 class="course-title">
+                    Top Down Shooter in Unreal Engine 5
+                </h3>
+
+                <div class="meta">
+                    ★★★★★ 4.8 • 2,400 Students
+                </div>
+
+                <p class="description">
+                    Build a complete top-down shooter game from scratch using
+                    Blueprint. Learn combat systems, enemy AI, UI,
+                    weapons, animations and professional workflows.
+                </p>
+
+                <ul class="features">
+                    <li>✓ Beginner Friendly</li>
+                    <li>✓ Full Game Project</li>
+                    <li>✓ Blueprint Only</li>
+                    <li>✓ Source Files Included</li>
+                </ul>
+
+                <div class="bottom-row">
+
+                    <div class="prices">
+                        <span class="old-price">$89.99</span>
+                        <span class="new-price">$12.99</span>
+                    </div>
+
+                    <a href="#" class="buy-btn">
+                        Get Discount
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="course-card">
+
+            <img src="course1.jpg"
+            class="course-image">
+
+            <div class="course-content">
+
+                <span class="discount">
+                    🔥 85% OFF
+                </span>
+
+                <h3 class="course-title">
+                    Top Down Shooter in Unreal Engine 5
+                </h3>
+
+                <div class="meta">
+                    ★★★★★ 4.8 • 2,400 Students
+                </div>
+
+                <p class="description">
+                    Build a complete top-down shooter game from scratch using
+                    Blueprint. Learn combat systems, enemy AI, UI,
+                    weapons, animations and professional workflows.
+                </p>
+
+                <ul class="features">
+                    <li>✓ Beginner Friendly</li>
+                    <li>✓ Full Game Project</li>
+                    <li>✓ Blueprint Only</li>
+                    <li>✓ Source Files Included</li>
+                </ul>
+
+                <div class="bottom-row">
+
+                    <div class="prices">
+                        <span class="old-price">$89.99</span>
+                        <span class="new-price">$12.99</span>
+                    </div>
+
+                    <a href="#" class="buy-btn">
+                        Get Discount
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="course-card">
+
+            <img src="course1.jpg"
+            class="course-image">
+
+            <div class="course-content">
+
+                <span class="discount">
+                    🔥 85% OFF
+                </span>
+
+                <h3 class="course-title">
+                    Top Down Shooter in Unreal Engine 5
+                </h3>
+
+                <div class="meta">
+                    ★★★★★ 4.8 • 2,400 Students
+                </div>
+
+                <p class="description">
+                    Build a complete top-down shooter game from scratch using
+                    Blueprint. Learn combat systems, enemy AI, UI,
+                    weapons, animations and professional workflows.
+                </p>
+
+                <ul class="features">
+                    <li>✓ Beginner Friendly</li>
+                    <li>✓ Full Game Project</li>
+                    <li>✓ Blueprint Only</li>
+                    <li>✓ Source Files Included</li>
+                </ul>
+
+                <div class="bottom-row">
+
+                    <div class="prices">
+                        <span class="old-price">$89.99</span>
+                        <span class="new-price">$12.99</span>
+                    </div>
+
+                    <a href="#" class="buy-btn">
+                        Get Discount
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="course-card">
+
+            <img src="course1.jpg"
+            class="course-image">
+
+            <div class="course-content">
+
+                <span class="discount">
+                    🔥 85% OFF
+                </span>
+
+                <h3 class="course-title">
+                    Top Down Shooter in Unreal Engine 5
+                </h3>
+
+                <div class="meta">
+                    ★★★★★ 4.8 • 2,400 Students
+                </div>
+
+                <p class="description">
+                    Build a complete top-down shooter game from scratch using
+                    Blueprint. Learn combat systems, enemy AI, UI,
+                    weapons, animations and professional workflows.
+                </p>
+
+                <ul class="features">
+                    <li>✓ Beginner Friendly</li>
+                    <li>✓ Full Game Project</li>
+                    <li>✓ Blueprint Only</li>
+                    <li>✓ Source Files Included</li>
+                </ul>
+
+                <div class="bottom-row">
+
+                    <div class="prices">
+                        <span class="old-price">$89.99</span>
+                        <span class="new-price">$12.99</span>
+                    </div>
+
+                    <a href="#" class="buy-btn">
+                        Get Discount
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+© 2026 Unreal Magic Academy
+</footer>
+
+</body>
+</html>
