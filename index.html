@@ -62,12 +62,52 @@ body{
 }
 
 .course-card{
+    position:relative;
     background:rgba(255,255,255,.05);
     backdrop-filter:blur(12px);
     border:1px solid rgba(255,255,255,.08);
     border-radius:24px;
     overflow:hidden;
     transition:.3s;
+}
+
+.course-tag{
+    position:absolute;
+    top:15px;
+    right:15px;
+
+    padding:7px 14px;
+
+    border-radius:30px;
+
+    font-size:.75rem;
+    font-weight:700;
+
+    color:white;
+
+    z-index:100;
+
+    letter-spacing:.5px;
+}
+
+.tag-hot{
+    background:#ff4d4d;
+}
+
+.tag-new{
+    background:#1abc9c;
+}
+
+.tag-hotnew{
+    background:linear-gradient(135deg,#ff4d4d,#ff9800);
+}
+
+.tag-best{
+    background:#9b59b6;
+}
+
+.tag-top{
+    background:#3498db;
 }
 
 .course-card:hover{
@@ -209,6 +249,9 @@ footer{
 
         <div class="course-card">
 
+            <div class="course-tag tag-hot">
+                🔥 HOT
+            </div>
             <img src="7In1.jpg"
             class="course-image">
 
@@ -300,7 +343,9 @@ footer{
 
         </div>
         <div class="course-card">
-
+            <div class="course-tag tag-new">
+                🆕 NEW
+            </div>
             <img src="00 SkillshareCover.png"
             class="course-image">
 
